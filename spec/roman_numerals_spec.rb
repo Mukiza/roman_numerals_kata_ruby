@@ -19,6 +19,10 @@ describe 'RomanNumerals' do
         it "returns X when given ten" do
             expect(@number.to_roman(10)).to eq("X")
         end
+
+        it "returns XL when given 40"do
+            expect(@number.to_roman(40)).to eq("XL")
+        end
     end
     context "converts numbers two to three" do
          it 'returns roman II given two' do
@@ -58,6 +62,8 @@ describe 'RomanNumerals' do
         it "returns XIX when given Ninenteen" do
             expect(@number.to_roman(19)).to eq("XIX")
         end
+
     end
+
 
 end
