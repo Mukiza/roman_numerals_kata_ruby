@@ -15,6 +15,10 @@ describe 'RomanNumerals' do
         it "returns V given five" do
             expect(@number.to_roman(5)).to eq("V")
         end
+
+        it "returns X when given ten" do
+            expect(@number.to_roman(10)).to eq("X")
+        end
     end
     context "converts numbers two to three" do
          it 'returns roman II given two' do
@@ -32,6 +36,17 @@ describe 'RomanNumerals' do
         it "returns IV when given four" do
             expect(@number.to_roman(4)).to eq("IV")
         end
+
+        it "returns IX given eight" do
+            expect(@number.to_roman(9)).to eq("IX")
+        end
+    end
+
+    context "converts additions " do
+        it "returns VI given six" do
+            expect(@number.to_roman(6)).to eq("VI")
+        end
+
     end
 
 end
