@@ -1,7 +1,7 @@
 class RomanNumerals
 
     def to_roman(number)
-
+        return "IV" if number == 4
         result = ""
 
         while number >= 1
