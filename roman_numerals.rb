@@ -1,6 +1,7 @@
 class RomanNumerals
 
     def to_roman(number)
+        return "V" if number == 5
         return "IV" if number == 4
         result = ""
 

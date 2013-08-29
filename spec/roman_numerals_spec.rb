@@ -1,17 +1,22 @@
 
 require_relative '../roman_numerals.rb'
 
-describe 'TestRomanNumerals' do
+describe 'RomanNumerals' do
 
     before(:each) do
          @number = RomanNumerals.new
     end
 
-    context "converts numbers one to three" do
+    context "converts constant symbols one" do
         it 'returns roman I given one' do
             expect(@number.to_roman(1)).to eq('I')
         end
 
+        it "returns V given five" do
+            expect(@number.to_roman(5)).to eq("V")
+        end
+    end
+    context "converts numbers two to three" do
          it 'returns roman II given two' do
             expect(@number.to_roman(2)).to eq('II')
          end
@@ -28,4 +33,5 @@ describe 'TestRomanNumerals' do
             expect(@number.to_roman(4)).to eq("IV")
         end
     end
+
 end
