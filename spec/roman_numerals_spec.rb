@@ -47,6 +47,17 @@ describe 'RomanNumerals' do
             expect(@number.to_roman(6)).to eq("VI")
         end
 
+        it "returns XI when given eleven" do
+            expect(@number.to_roman(11)).to eq("XI")
+        end
+
+        it "returns XIV when given fourteen" do
+            expect(@number.to_roman(14)).to eq("XIV")
+        end
+
+        it "returns XIX when given Ninenteen" do
+            expect(@number.to_roman(19)).to eq("XIX")
+        end
     end
 
 end
