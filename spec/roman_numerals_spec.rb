@@ -20,8 +20,16 @@ describe 'RomanNumerals' do
             expect(@number.to_roman(10)).to eq("X")
         end
 
-        it "returns XL when given 40"do
+        it "returns XL when given fourty" do
             expect(@number.to_roman(40)).to eq("XL")
+        end
+
+        it "returns L when given Fifty" do
+            expect(@number.to_roman(50)).to eq("L")
+        end
+
+        it "returns C when given a hundred" do
+            expect(@number.to_roman(100)).to eq("C")
         end
     end
     context "converts numbers two to three" do
@@ -31,6 +39,10 @@ describe 'RomanNumerals' do
 
         it "return roman III when given three" do
             expect(@number.to_roman(3)).to eq("III")
+        end
+
+        it "returns XCIV when given 94" do
+            expect(@number.to_roman(94)).to eq("XCIV")
         end
 
     end
@@ -63,6 +75,9 @@ describe 'RomanNumerals' do
             expect(@number.to_roman(19)).to eq("XIX")
         end
 
+        it "returns XCV when given Ninety Five" do
+            expect(@number.to_roman(95)).to eq("XCV")
+        end
     end
 
 
